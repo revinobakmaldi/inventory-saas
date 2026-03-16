@@ -35,7 +35,7 @@ export default function UsersPage() {
   return (
     <AdminLayout>
       <div className="space-y-6">
-        <h1 className="text-2xl font-semibold text-slate-900">Staff Accounts</h1>
+        <h1 className="text-xl md:text-2xl font-semibold text-slate-900">Staff Accounts</h1>
         <Card>
           <CardHeader className="pb-4">
             <CardTitle>Add Staff Member</CardTitle>
@@ -70,7 +70,7 @@ export default function UsersPage() {
           </CardContent>
         </Card>
         <Card>
-          <CardContent className="p-0">
+          <CardContent className="p-0 overflow-x-auto">
             <Table>
               <TableHeader>
                 <TableRow>

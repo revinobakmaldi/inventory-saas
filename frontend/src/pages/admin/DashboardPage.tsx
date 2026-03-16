@@ -28,10 +28,10 @@ export default function DashboardPage() {
   return (
     <AdminLayout>
       <div className="space-y-6">
-        <div className="flex items-center justify-between">
-          <h1 className="text-2xl font-semibold text-slate-900">Stock Dashboard</h1>
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <h1 className="text-xl md:text-2xl font-semibold text-slate-900">Stock Dashboard</h1>
           <Select value={selectedOutlet} onValueChange={setSelectedOutlet}>
-            <SelectTrigger className="w-48">
+            <SelectTrigger className="w-44">
               <SelectValue placeholder="All Outlets" />
             </SelectTrigger>
             <SelectContent>
@@ -41,7 +41,7 @@ export default function DashboardPage() {
           </Select>
         </div>
         <Card>
-          <CardContent className="p-0">
+          <CardContent className="p-0 overflow-x-auto">
             <Table>
               <TableHeader>
                 <TableRow>

@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import StaffLayout from "../../components/StaffLayout";
 import QRScanner from "../../components/QRScanner";
-import { ScanLine } from "lucide-react";
+import { Scan } from "@phosphor-icons/react";
 
 export default function ScanPage() {
   const navigate = useNavigate();
@@ -22,7 +22,7 @@ export default function ScanPage() {
     <StaffLayout>
       <div className="flex flex-col items-center py-4">
         <div className="flex items-center gap-2 mb-1">
-          <ScanLine className="h-5 w-5 text-[#1a1a2e]" />
+          <Scan className="h-5 w-5 text-[#1a1a2e]" />
           <h2 className="text-lg font-semibold text-slate-900">Scan Product</h2>
         </div>
         <p className="text-sm text-slate-500 mb-6 text-center">Point camera at the QR label on the product</p>

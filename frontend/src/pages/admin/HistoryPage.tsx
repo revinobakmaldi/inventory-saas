@@ -9,7 +9,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { CaretLeft, CaretRight } from "@phosphor-icons/react";
 
 const typeBadge = (type: string) => {
   if (type === "IN") return <Badge className="bg-green-100 text-green-800 hover:bg-green-100 border-0">IN</Badge>;
@@ -36,10 +36,10 @@ export default function HistoryPage() {
   return (
     <AdminLayout>
       <div className="space-y-6">
-        <h1 className="text-2xl font-semibold text-slate-900">Stock History</h1>
+        <h1 className="text-xl md:text-2xl font-semibold text-slate-900">Stock History</h1>
         <Card>
           <CardContent className="pt-4">
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-2">
               <Select value={filters.outlet_id || "all"} onValueChange={v => setFilters({ ...filters, outlet_id: v === "all" ? "" : v, page: 1 })}>
                 <SelectTrigger className="w-44"><SelectValue placeholder="All Outlets" /></SelectTrigger>
                 <SelectContent>
@@ -62,7 +62,7 @@ export default function HistoryPage() {
           </CardContent>
         </Card>
         <Card>
-          <CardContent className="p-0">
+          <CardContent className="p-0 overflow-x-auto">
             <Table>
               <TableHeader>
                 <TableRow>
@@ -90,10 +90,10 @@ export default function HistoryPage() {
               <span className="text-sm text-slate-500">Page {filters.page}</span>
               <div className="flex gap-2">
                 <Button variant="outline" size="sm" disabled={filters.page === 1} onClick={() => setFilters({ ...filters, page: filters.page - 1 })}>
-                  <ChevronLeft className="h-4 w-4" />
+                  <CaretLeft className="h-4 w-4" />
                 </Button>
                 <Button variant="outline" size="sm" disabled={entries.length < filters.page_size} onClick={() => setFilters({ ...filters, page: filters.page + 1 })}>
-                  <ChevronRight className="h-4 w-4" />
+                  <CaretRight className="h-4 w-4" />
                 </Button>
               </div>
             </div>

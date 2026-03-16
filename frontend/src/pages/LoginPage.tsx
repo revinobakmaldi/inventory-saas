@@ -7,6 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
+import { Package } from "@phosphor-icons/react";
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
@@ -38,7 +39,9 @@ export default function LoginPage() {
       <Card className="w-full max-w-sm">
         <CardHeader className="space-y-1 pb-4">
           <div className="flex items-center gap-2 mb-2">
-            <div className="w-7 h-7 rounded bg-[#1a1a2e]" />
+            <div className="w-7 h-7 rounded bg-[#1a1a2e] flex items-center justify-center">
+              <Package className="h-4 w-4 text-white" weight="fill" />
+            </div>
             <span className="font-semibold text-slate-900">Inventory SaaS</span>
           </div>
           <CardTitle className="text-xl">Sign in</CardTitle>

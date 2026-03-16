@@ -6,7 +6,7 @@ import { useAuth } from "../../hooks/useAuth";
 import { StockCurrentItem } from "../../types";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Plus, Package, WifiOff } from "lucide-react";
+import { Plus, Package, WifiSlash } from "@phosphor-icons/react";
 import { cn } from "@/lib/utils";
 
 export default function StaffHomePage() {
@@ -51,7 +51,7 @@ export default function StaffHomePage() {
 
       {isOffline && (
         <div className="flex items-center gap-2 bg-amber-50 border border-amber-200 text-amber-800 rounded-lg p-3 text-sm mb-4">
-          <WifiOff className="h-4 w-4 shrink-0" />
+          <WifiSlash className="h-4 w-4 shrink-0" />
           No connection — reconnect to submit entries.
         </div>
       )}

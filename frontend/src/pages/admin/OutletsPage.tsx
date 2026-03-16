@@ -30,7 +30,7 @@ export default function OutletsPage() {
   return (
     <AdminLayout>
       <div className="space-y-6">
-        <h1 className="text-2xl font-semibold text-slate-900">Outlets</h1>
+        <h1 className="text-xl md:text-2xl font-semibold text-slate-900">Outlets</h1>
         <Card>
           <CardHeader className="pb-4">
             <CardTitle>Add Outlet</CardTitle>
@@ -50,7 +50,7 @@ export default function OutletsPage() {
           </CardContent>
         </Card>
         <Card>
-          <CardContent className="p-0">
+          <CardContent className="p-0 overflow-x-auto">
             <Table>
               <TableHeader>
                 <TableRow>

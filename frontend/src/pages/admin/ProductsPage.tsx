@@ -8,7 +8,7 @@ import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { Download } from "lucide-react";
+import { DownloadSimple } from "@phosphor-icons/react";
 import { cn } from "@/lib/utils";
 
 export default function ProductsPage() {
@@ -39,10 +39,10 @@ export default function ProductsPage() {
   return (
     <AdminLayout>
       <div className="space-y-6">
-        <div className="flex items-center justify-between">
-          <h1 className="text-2xl font-semibold text-slate-900">Products</h1>
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <h1 className="text-xl md:text-2xl font-semibold text-slate-900">Products</h1>
           <Button variant="outline" onClick={handleDownloadQR}>
-            <Download className="h-4 w-4 mr-2" />
+            <DownloadSimple className="h-4 w-4 mr-2" />
             QR Labels PDF
           </Button>
         </div>
@@ -69,7 +69,7 @@ export default function ProductsPage() {
           </CardContent>
         </Card>
         <Card>
-          <CardContent className="p-0">
+          <CardContent className="p-0 overflow-x-auto">
             <Table>
               <TableHeader>
                 <TableRow>
